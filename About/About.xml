@@ -3,6 +3,7 @@
 
   <name>SF Orbital Trader Transponder</name>
   <author>Mehni, Shotgunfrenzy and rselbo</author>
+  <packageId>rselbo.orbitaltradertransponder</packageId>
   <supportedVersions>
     <li>1.0</li>
     <li>1.1</li>
@@ -22,5 +23,4 @@
 
     Happy trading ya raider loving hecks!!!
   </description>
-  <packageId>rselbo.orbital-trader-transponder</packageId>
 </ModMetaData>
