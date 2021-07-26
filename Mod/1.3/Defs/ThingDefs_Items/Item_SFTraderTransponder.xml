@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
- <ThingDef ParentName="ResourceBase" Name="SFArtifactBase" Abstract="True">
+  <ThingDef ParentName="ResourceBase" Name="SFArtifactBase" Abstract="True">
     <thingClass>ThingWithComps</thingClass>
     <thingCategories>
       <li>Items</li>
@@ -11,7 +11,7 @@
     </tradeTags>
     <statBases>
       <Mass>0.5</Mass>
-		</statBases>
+    </statBases>
     <comps>
       <li Class="CompProperties_UseEffect">
         <compClass>CompUseEffect_DestroySelf</compClass>
@@ -19,10 +19,14 @@
     </comps>
   </ThingDef>
 
+  <OrbitalTraderTransponder>
+    <defName>Initializer</defName>
+  </OrbitalTraderTransponder>
+
   <ThingDef ParentName="SFArtifactBase">
     <defName>SFOrbitalTraderTransponder</defName>
-    <label>Orbital trader transponder</label>
-    <description>One-use item that can signal an orbital trader to your position, trader type is random.</description>
+    <label>Orbital trader beacon</label>
+    <description>One-use item that can signal an orbital trader to your position.</description>
     <graphicData>
       <texPath>Things/Item/Artifact/SFTraderTransponder</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -30,21 +34,152 @@
     <resourceReadoutPriority>Middle</resourceReadoutPriority>
     <stackLimit>1</stackLimit>
     <tradeNeverStack>true</tradeNeverStack>
-	<techLevel>Spacer</techLevel>
+    <techLevel>Spacer</techLevel>
     <statBases>
-      <MarketValue>1500</MarketValue>
+      <MarketValue>110</MarketValue>
       <MaxHitPoints>100</MaxHitPoints>
     </statBases>
     <drawGUIOverlay>false</drawGUIOverlay>
+    <researchPrerequisites>
+      <li>OrbitalTradeBeacon</li>
+    </researchPrerequisites>
     <comps>
       <li Class="CompProperties_Usable">
         <useJob>UseItem</useJob>
         <useLabel>Use doodad to call traders</useLabel>
       </li>
-      <li Class="CompProperties_UseEffect">
+      <li Class="TraderWhereAreYou.OrbitalCompUseEffectProperties">
         <compClass>TraderWhereAreYou.CompUseEffect_CallTrader</compClass>
+        <TradeBeaconType>Random</TradeBeaconType>
       </li>
     </comps>
   </ThingDef>
-  
+
+  <ThingDef ParentName="SFArtifactBase">
+    <defName>SFOrbitalTraderTransponder_bulk</defName>
+    <label>Orbital trader beacon - Bulk Trader</label>
+    <description>One-use item that can signal an orbital trader to your position. This one calls a Bulk goods trader</description>
+    <graphicData>
+      <texPath>Things/Item/Artifact/SFAdvTraderTransponder</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <stackLimit>1</stackLimit>
+    <tradeNeverStack>true</tradeNeverStack>
+    <techLevel>Spacer</techLevel>
+    <statBases>
+      <MarketValue>230</MarketValue>
+      <MaxHitPoints>100</MaxHitPoints>
+    </statBases>
+    <drawGUIOverlay>false</drawGUIOverlay>
+    <researchPrerequisites>
+      <li>AdvancedOrbitalTradeBeacon</li>
+    </researchPrerequisites>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Use doodad to call traders</useLabel>
+      </li>
+      <li Class="TraderWhereAreYou.OrbitalCompUseEffectProperties">
+        <compClass>TraderWhereAreYou.CompUseEffect_CallTrader</compClass>
+        <TradeBeaconType>Orbital_BulkGoods</TradeBeaconType>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="SFArtifactBase">
+    <defName>SFOrbitalTraderTransponder_combat</defName>
+    <label>Orbital trader beacon - Combat Supplier</label>
+    <description>One-use item that can signal an orbital trader to your position. This one calls a Combat Supplier</description>
+    <graphicData>
+      <texPath>Things/Item/Artifact/SFAdvTraderTransponder</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <stackLimit>1</stackLimit>
+    <tradeNeverStack>true</tradeNeverStack>
+    <techLevel>Spacer</techLevel>
+    <statBases>
+      <MarketValue>230</MarketValue>
+      <MaxHitPoints>100</MaxHitPoints>
+    </statBases>
+    <drawGUIOverlay>false</drawGUIOverlay>
+    <researchPrerequisites>
+      <li>AdvancedOrbitalTradeBeacon</li>
+    </researchPrerequisites>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Use doodad to call traders</useLabel>
+      </li>
+      <li Class="TraderWhereAreYou.OrbitalCompUseEffectProperties">
+        <compClass>TraderWhereAreYou.CompUseEffect_CallTrader</compClass>
+        <TradeBeaconType>Orbital_CombatSupplier</TradeBeaconType>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="SFArtifactBase">
+    <defName>SFOrbitalTraderTransponder_exotic</defName>
+    <label>Orbital trader beacon - Exotic Trader</label>
+    <description>One-use item that can signal an orbital trader to your position. This one calls a Exotic goods trader</description>
+    <graphicData>
+      <texPath>Things/Item/Artifact/SFAdvTraderTransponder</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <stackLimit>1</stackLimit>
+    <tradeNeverStack>true</tradeNeverStack>
+    <techLevel>Spacer</techLevel>
+    <statBases>
+      <MarketValue>230</MarketValue>
+      <MaxHitPoints>100</MaxHitPoints>
+    </statBases>
+    <drawGUIOverlay>false</drawGUIOverlay>
+    <researchPrerequisites>
+      <li>AdvancedOrbitalTradeBeacon</li>
+    </researchPrerequisites>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Use doodad to call traders</useLabel>
+      </li>
+      <li Class="TraderWhereAreYou.OrbitalCompUseEffectProperties">
+        <compClass>TraderWhereAreYou.CompUseEffect_CallTrader</compClass>
+        <TradeBeaconType>Orbital_Exotic</TradeBeaconType>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="SFArtifactBase">
+    <defName>SFOrbitalTraderTransponder_pirate</defName>
+    <label>Orbital trader beacon - Pirate Merchant</label>
+    <description>One-use item that can signal an orbital trader to your position. This one calls a Pirate merchant</description>
+    <graphicData>
+      <texPath>Things/Item/Artifact/SFAdvTraderTransponder</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <stackLimit>1</stackLimit>
+    <tradeNeverStack>true</tradeNeverStack>
+    <techLevel>Spacer</techLevel>
+    <statBases>
+      <MarketValue>230</MarketValue>
+      <MaxHitPoints>100</MaxHitPoints>
+    </statBases>
+    <drawGUIOverlay>false</drawGUIOverlay>
+    <researchPrerequisites>
+      <li>AdvancedOrbitalTradeBeacon</li>
+    </researchPrerequisites>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Use doodad to call traders</useLabel>
+      </li>
+      <li Class="TraderWhereAreYou.OrbitalCompUseEffectProperties">
+        <compClass>TraderWhereAreYou.CompUseEffect_CallTrader</compClass>
+        <TradeBeaconType>Orbital_PirateMerchant</TradeBeaconType>
+      </li>
+    </comps>
+  </ThingDef>
+
 </Defs>
