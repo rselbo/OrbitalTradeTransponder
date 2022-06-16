@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <SFOrbitalTraderTransponder.label>軌道通信機</SFOrbitalTraderTransponder.label>
+  <SFOrbitalTraderTransponder.description>商船トレーダーに自分の座標を送信できる使い捨ての装置です。</SFOrbitalTraderTransponder.description>
+  <SFOrbitalTraderTransponder.comps.1.useLabel>装置を使って商船を呼び出す</SFOrbitalTraderTransponder.comps.1.useLabel>
+
+  <SFOrbitalTraderTransponder_bulk.label>軌道通信機(貿易)</SFOrbitalTraderTransponder_bulk.label>
+  <SFOrbitalTraderTransponder_bulk.description>商船トレーダーに自分の座標を送信できる使い捨ての装置です。これを使うと貿易商を呼び出せます。</SFOrbitalTraderTransponder_bulk.description>
+  <SFOrbitalTraderTransponder_bulk.comps.1.useLabel>装置を使って商船を呼び出す</SFOrbitalTraderTransponder_bulk.comps.1.useLabel>
+
+  <SFOrbitalTraderTransponder_combat.label>軌道通信機(武器)</SFOrbitalTraderTransponder_combat.label>
+  <SFOrbitalTraderTransponder_combat.description>商船トレーダーに自分の座標を送信できる使い捨ての装置です。これを使うと武器商を呼び出せます。</SFOrbitalTraderTransponder_combat.description>
+  <SFOrbitalTraderTransponder_combat.comps.1.useLabel>装置を使って商船を呼び出す</SFOrbitalTraderTransponder_combat.comps.1.useLabel>
+
+  <SFOrbitalTraderTransponder_exotic.label>軌道通信機(エキゾ)</SFOrbitalTraderTransponder_exotic.label>
+  <SFOrbitalTraderTransponder_exotic.description>商船トレーダーに自分の座標を送信できる使い捨ての装置です。これを使うとエキゾチックトレーダーを呼び出せます。</SFOrbitalTraderTransponder_exotic.description>
+  <SFOrbitalTraderTransponder_exotic.comps.1.useLabel>装置を使って商船を呼び出す</SFOrbitalTraderTransponder_exotic.comps.1.useLabel>
+
+  <SFOrbitalTraderTransponder_pirate.label>軌道通信機(闇)</SFOrbitalTraderTransponder_pirate.label>
+  <SFOrbitalTraderTransponder_pirate.description>商船トレーダーに自分の座標を送信できる使い捨ての装置です。これを使うと闇商を呼び出せます。</SFOrbitalTraderTransponder_pirate.description>
+  <SFOrbitalTraderTransponder_pirate.comps.1.useLabel>装置を使って商船を呼び出す</SFOrbitalTraderTransponder_pirate.comps.1.useLabel>
+
+
+</LanguageData>
