@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <OrbitalTradeBeacon.label>軌道通信</OrbitalTradeBeacon.label>
+  <OrbitalTradeBeacon.description>商船を呼び出してコロニーに寄ってもらえるようになります。</OrbitalTradeBeacon.description>
+
+  <AdvancedOrbitalTradeBeacon.label>高等軌道通信</AdvancedOrbitalTradeBeacon.label>
+  <AdvancedOrbitalTradeBeacon.description>特定の商船を呼び出してコロニーに寄ってもらえるようになります。</AdvancedOrbitalTradeBeacon.description>
+
+
+</LanguageData>

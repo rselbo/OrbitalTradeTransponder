@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <SFMakeOrbitalTransponder.label>軌道通信機を作る</SFMakeOrbitalTransponder.label>
+  <SFMakeOrbitalTransponder.description>商船を呼び出せる軌道通信機を作ります。</SFMakeOrbitalTransponder.description>
+  <SFMakeOrbitalTransponder.jobString>軌道通信機を作成中</SFMakeOrbitalTransponder.jobString>
+
+  <SFMakeOrbitalTransponder_bulk.label>軌道通信機(貿易)を作る</SFMakeOrbitalTransponder_bulk.label>
+  <SFMakeOrbitalTransponder_bulk.description>貿易商船を呼び出せる軌道通信機を作ります</SFMakeOrbitalTransponder_bulk.description>
+  <SFMakeOrbitalTransponder_bulk.jobString>軌道通信機(貿易)を作成中</SFMakeOrbitalTransponder_bulk.jobString>
+
+  <SFMakeOrbitalTransponder_combat.label>軌道通信機(武器)を作る</SFMakeOrbitalTransponder_combat.label>
+  <SFMakeOrbitalTransponder_combat.description>武器商船を呼び出せる軌道通信機を作ります</SFMakeOrbitalTransponder_combat.description>
+  <SFMakeOrbitalTransponder_combat.jobString>軌道通信機(武器)を作成中</SFMakeOrbitalTransponder_combat.jobString>
+
+  <SFMakeOrbitalTransponder_exotic.label>軌道通信機(エキゾ)を作る</SFMakeOrbitalTransponder_exotic.label>
+  <SFMakeOrbitalTransponder_exotic.description>エキゾチックトレーダーの商船を呼び出せる軌道通信機を作ります</SFMakeOrbitalTransponder_exotic.description>
+  <SFMakeOrbitalTransponder_exotic.jobString>軌道通信機(エキゾ)を作成中</SFMakeOrbitalTransponder_exotic.jobString>
+
+  <SFMakeOrbitalTransponder_pirate.label>軌道通信機(闇)を作る</SFMakeOrbitalTransponder_pirate.label>
+  <SFMakeOrbitalTransponder_pirate.description>闇商船を呼び出せる軌道通信機を作ります</SFMakeOrbitalTransponder_pirate.description>
+  <SFMakeOrbitalTransponder_pirate.jobString>軌道通信機(闇)を作成中</SFMakeOrbitalTransponder_pirate.jobString>
+
+
+</LanguageData>
