@@ -24,18 +24,17 @@ namespace TraderWhereAreYou
             base.Initialize(props);
             Log.Message("CompUseEffect_CallTrader::Initialize");
         }
-        public override bool CanBeUsedBy(Pawn p, out string failReason)
+        public override AcceptanceReport CanBeUsedBy(Pawn p)
         {
             Map map = p.Map;
             if (map.passingShipManager.passingShips.Count >= 5)
             {
-                failReason = "MaxShipsInOrbit".Translate();
-                return false;
+                return "MaxShipsInOrbit".Translate();
             }
 
-            failReason = null;
-            return true;
+            return AcceptanceReport.WasAccepted;
         }
+
         // this is a weird amalgamation between CompDoEffect and IncidentWorker_OrbitalTraderArrival
         public override void DoEffect(Pawn usedBy)
         {
@@ -70,7 +69,7 @@ namespace TraderWhereAreYou
                         tradeShip.name,
                         tradeShip.def.label,
                         "TraderArrivalNoFaction".Translate()
-                    ), LetterDefOf.PositiveEvent, null);
+                    ), LetterDefOf.PositiveEvent);
                 }
                 map.passingShipManager.AddShip(tradeShip);
                 tradeShip.GenerateThings();

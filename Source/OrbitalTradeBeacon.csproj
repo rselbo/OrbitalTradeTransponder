@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TraderWhereAreYou</RootNamespace>
     <AssemblyName>CompUseEffect_CallTrader</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -35,9 +35,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>Source-DLLs\Assembly-CSharp.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="Assembly-CSharp, Version=1.4.8334.26833, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -50,13 +50,16 @@
     <Compile Include="CompUseEffect_CallTrader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>
     </PreBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PostBuildEvent>copy $(TargetPath) D:\SteamLibrary\steamapps\common\RimWorld\Mods\Orbital-Trade-Transponder\1.3\Assemblies
-copy C:\Users\roars\work\OrbitalTradeTransponder\Mod\1.3\Defs\ThingDefs_Items\Item_SFTraderTransponder.xml D:\SteamLibrary\steamapps\common\RimWorld\Mods\Orbital-Trade-Transponder\1.3\Defs\ThingDefs_Items</PostBuildEvent>
+    <PostBuildEvent>xcopy /Y $(TargetPath)  $(SolutionDir)OrbitalTradeTransponder\Mod\1.6\Assemblies\
+xcopy /Y /E $(SolutionDir)OrbitalTradeTransponder\Mod\ D:\SteamLibrary\steamapps\common\RimWorld\Mods\Orbital-Trade-Transponder</PostBuildEvent>
   </PropertyGroup>
 </Project>
